@@ -10,7 +10,7 @@ const BASE_URL = "https://dummyjson.com/products";
 router.get("/categories", async (req, res) => {
   try {
     const response = await axios.get(`${BASE_URL}/categories`);
-    res.json(response.data); // Send the categories array as the response
+    res.json(response.data);
   } catch (error) {
     console.error("Error fetching categories:", error.message);
     res.status(500).json({ message: "Error fetching categories", error: error.message });
@@ -52,8 +52,8 @@ router.get("/", async (req, res) => {
 
 
 router.get("/category/:categoryName", async (req, res) => {
-  const { categoryName } = req.params; // Extract the category name from the URL parameter
-  const { skip = 0, limit = 10 } = req.query; // Use skip and limit as query parameters
+  const { categoryName } = req.params; 
+  const { skip = 0, limit = 10 } = req.query; 
 
   try {
 
