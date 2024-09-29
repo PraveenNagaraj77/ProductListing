@@ -24,6 +24,9 @@ const categorySlice = createSlice({
     builder.addCase(fetchCategories.fulfilled, (state, action) => {
       state.categories = action.payload;
     });
+    .addCase(fetchCategories.rejected, (state, action) => {
+      console.error('Failed to fetch categories:', action.error); 
+    });
   },
 });
 
