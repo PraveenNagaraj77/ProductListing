@@ -3,7 +3,7 @@ const axios = require("axios");
 
 const router = express.Router();
 
-const BASE_URL = "https://productlisting-ra0j.onrender.com/api/products";
+const BASE_URL = "https://dummyjson.com/products"; // Use the Dummy JSON API
 
 router.get("/categories", async (req, res) => {
   try {
@@ -18,9 +18,10 @@ router.get("/", async (req, res) => {
   const { category, skip = 0, limit = 10, search } = req.query;
   try {
     let url = `${BASE_URL}?limit=${limit}&skip=${skip}`;
-    
+
     if (category) {
-      url = `${BASE_URL}/category/${category}?limit=${limit}&skip=${skip}`;
+      // Correctly append the category as a query parameter
+      url += `&category=${category}`;
     }
 
     if (search) {
