@@ -3,7 +3,7 @@ const axios = require("axios");
 
 const router = express.Router();
 
-const BASE_URL = "https://dummyjson.com/products";
+const BASE_URL = "https://productlisting-ra0j.onrender.com/api/products";
 
 router.get("/categories", async (req, res) => {
   try {
