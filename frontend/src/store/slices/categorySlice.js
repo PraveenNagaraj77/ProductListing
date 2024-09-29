@@ -4,8 +4,8 @@ import axios from 'axios';
 const BASE_URL = 'https://productlisting-ra0j.onrender.com/api/products';
 
 export const fetchCategories = createAsyncThunk('categories/fetchCategories', async () => {
-  const response = await axios.get(`${BASE_URL}/categories`);
-   console.log('Fetched categories:', response.data);
+  const response = await axios.get(`${BASE_URL}/categories`); // Make sure this is pointing to the correct endpoint
+  console.log('Fetched categories:', response.data);
   return response.data;
 });
 
@@ -23,9 +23,10 @@ const categorySlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchCategories.fulfilled, (state, action) => {
       state.categories = action.payload;
-    });
+    })
     .addCase(fetchCategories.rejected, (state, action) => {
-      console.error('Failed to fetch categories:', action.error); 
+      console.error('Failed to fetch categories:', action.error);
+      // Optionally set an error state here if needed
     });
   },
 });
