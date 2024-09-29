@@ -8,13 +8,14 @@ const BASE_URL = 'https://productlisting-ra0j.onrender.com/api/products';
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async ({ category, skip, limit }) => {
-    // Construct the URL based on category and pagination
+    
     const url = category
       ? `${BASE_URL}/category/${category}?skip=${skip}&limit=${limit}`
       : `${BASE_URL}?skip=${skip}&limit=${limit}`;
 
     const response = await axios.get(url);
-    return response.data; // Return fetched products
+    console.log(response.data);
+    return response.data; 
   }
 );
 
