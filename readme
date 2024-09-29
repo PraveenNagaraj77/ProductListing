@@ -1,0 +1,48 @@
+Project Overview: Price-Listing
+
+Description: The Price-Listing application is a dynamic web application designed to help users browse and search for products by categories. It provides an intuitive interface for viewing product details, including titles, descriptions, prices, and images. Users can filter products based on categories and search for specific items using a search feature. The application also incorporates light and dark themes to enhance user experience.
+
+Tech Stack:
+
+Next.js: A React framework for building server-rendered applications with optimized performance.
+Redux Toolkit: For state management, making it easier to manage global states such as categories and products.
+Axios: For making API calls to fetch product and category data.
+CSS: For styling the application, including responsive layouts and theme management.
+Font Awesome: For icons, enhancing the visual appeal of the UI.
+DummyJSON API: Used as the backend service to fetch product and category data.
+
+Key Functionalities:
+
+Product Browsing:
+
+Users can view a list of products displayed in a grid layout.
+Each product card includes details such as the title, description, price, and an image.
+
+Category Filtering:
+
+Users can filter products by selecting a category from a dropdown menu.
+The application fetches and displays products related to the selected category.
+Search Functionality:
+
+A search bar allows users to quickly find products by entering keywords that match product titles.
+Pagination:
+
+Products are displayed with pagination controls, enabling users to navigate through multiple pages of products.
+Users can move between pages using "Previous" and "Next" buttons.
+
+Responsive Design:
+
+The application is designed to be fully responsive, ensuring it works well on various screen sizes.
+
+Theme Toggle:
+
+Users can toggle between light and dark themes, enhancing usability based on personal preferences.
+
+Footer Component:
+
+A footer section provides additional information or links, enhancing the overall layout of the application.
+
+Conclusion:
+The Price-Listing application is an efficient and user-friendly tool for browsing products, leveraging modern web technologies to create a seamless experience. It demonstrates proficiency in Next.js, state management, API integration, and responsive design principles.
+
+Developed By Praveen.
