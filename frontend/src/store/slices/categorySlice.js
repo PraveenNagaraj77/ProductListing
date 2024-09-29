@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const BASE_URL = 'https://dummyjson.com/products';
+const BASE_URL = 'https://productlisting-ra0j.onrender.com/products';
 
 export const fetchCategories = createAsyncThunk('categories/fetchCategories', async () => {
   const response = await axios.get(`${BASE_URL}/categories`);
