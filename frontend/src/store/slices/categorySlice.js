@@ -1,10 +1,10 @@
-// store/categorySlice.js
+
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const BASE_URL = 'https://productlisting-ra0j.onrender.com/api/products';
 
-// Async thunk to fetch categories
+
 export const fetchCategories = createAsyncThunk('categories/fetchCategories', async () => {
   const response = await axios.get(`${BASE_URL}/categories`);
   return response.data; // Return categories array
@@ -23,7 +23,7 @@ const categorySlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchCategories.fulfilled, (state, action) => {
-      state.categories = action.payload; // Populate categories in state
+      state.categories = action.payload; 
     });
   },
 });
