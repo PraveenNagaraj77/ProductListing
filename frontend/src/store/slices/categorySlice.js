@@ -5,6 +5,7 @@ const BASE_URL = 'https://productlisting-ra0j.onrender.com/api/products';
 
 export const fetchCategories = createAsyncThunk('categories/fetchCategories', async () => {
   const response = await axios.get(`${BASE_URL}/categories`);
+   console.log('Fetched categories:', response.data);
   return response.data;
 });
 
